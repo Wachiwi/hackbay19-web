@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css?family=Barlow:300,400,700&display=swap');
+
+* {
+  font-family: 'Barlow', sans-serif;
+  box-sizing: border-box
+}
+
+#app {
+  min-height: 100vh;
+
+}
+
+
+.welcome {
+  display: flex;
+
+  &__button {
+    //width: 50%;
+  }
+
+
+  &__button {
+    width: 100%!important;
+  }
+
+
+  &__logos {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;
+
+    &__logo {
+      margin-right: 50px;
+      max-width: 100px;
+      max-height: 100px;
+    }
+  }
+}

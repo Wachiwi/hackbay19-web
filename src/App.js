@@ -1,13 +1,25 @@
 import React from 'react';
+import {BrowserRouter as Router, Route, Link} from "react-router-dom";
 
 import 'semantic-ui-css/semantic.min.css';
-import './App.css';
-import {BrowserRouter as Router, Route, Link} from "react-router-dom";
+import './App.scss';
+
 import OneColumnLayout from './components/OneColumnLayout'
 import InfoView from './pages/info'
 import ReportView from './pages/report'
 import WelcomeView from './pages/welcome'
 import SummaryView from './pages/summary'
+
+
+
+/*
+Color:
+Text: #313131
+Primary: #4550E6
+Secondary: #248FA7
+Sec-light: #69C3CE
+Accent: #FBFCEE
+ */
 
 
 function App() {

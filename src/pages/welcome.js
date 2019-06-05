@@ -7,6 +7,7 @@ import Nuernberg from '../resources/img/nuernberger_logo.jpg';
 import Logo from '../resources/img/schadenzubeklagen-schwarz.png';
 import Hdi from '../resources/img/hdi_logo.png';
 import { Image, Button, Transition, Container, Header, Grid, Divider } from 'semantic-ui-react';
+import LinkButton from "../components/LinkButton";
 
 export default class Welcome extends Component {
   constructor(props) {
@@ -31,11 +32,8 @@ export default class Welcome extends Component {
           Damage Claim <br/> made Easy
         </Header>
 
-        <Link to="/report">
-          <Button style={{ marginTop: 100 }} className="welcome__button" color='orange' size='huge'
-                  content='Schaden melden'
-          />
-        </Link>
+
+        <LinkButton to="/report" primary block size='huge'>Schaden melden</LinkButton>
         <div style={{ textAlign: 'center' }}>
           <Link to="/info">Mehr informationen</Link>
         </div>
