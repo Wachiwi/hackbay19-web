@@ -34,7 +34,7 @@ export default (props) => {
   return (
     <Wizard>
       <Step next={checkLicensePlate} >
-        <Header>
+        <Header size='huge'>
           Allgemeine Informationen
           <Header.Subheader>
             Diese werden bearbeitet und an den Versicherer
@@ -51,7 +51,7 @@ export default (props) => {
         </Form>
       </Step>
       <Step next={validateBirthdayDate}>
-        <Header>
+        <Header size='huge'>
           Allgemeine Informationen
           <Header.Subheader>
             Diese werden bearbeitet und an den Versicherer
