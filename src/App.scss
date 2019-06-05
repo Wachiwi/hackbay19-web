@@ -5,12 +5,18 @@
   box-sizing: border-box;
 }
 
-#app {
+#root {
   min-height: 100vh;
-
+  height: 100vh;
 }
 
-button.primary {
+/*
+.container, .grid, .column  {
+  height: 100%;
+}
+*/
+
+button.primary, .primary.container {
   //color: #4550E6 !important;
   background-color: #4550E6 !important;
 }

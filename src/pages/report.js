@@ -138,34 +138,6 @@ export default (props) => {
                 </Segment>
                 <Image src={img}/>
             </Step>
-            <Step>
-                <Header>
-                    Der gemeldete Schadensfall wurde erfolgreich erfasst
-                </Header>
-                <p>
-                    Für diesen konnten wir eine automatische Auszahlung berechnen.
-                </p>
-                <Header>
-                    Deine Sofortauszahlung ist 1500 €
-                </Header>
-                <LinkButton to="/chash" primary fluid size='huge'>Alles klar!</LinkButton>
-                <p> </p>
-                <LinkButton to="/termin" primary fluid size='huge'>Gutachter-Prüfung</LinkButton>
-
-            </Step>
         </Wizard>
     );
-
-    /*
-      <SingleDatePicker
-            date={null}
-            onDateChange={date => console.log(date)}
-            focused={false}
-            onFocusChange={({ focused }) => console.log(focused)}
-            id="verify_birthday"
-            block={true}
-            regular={true}
-          />
-
-     */
 }
