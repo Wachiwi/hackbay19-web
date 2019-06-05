@@ -25,12 +25,10 @@ export default () => {
 
             {!working && <div>
               <Header size="huge">
-                Erfolg!
+                Der gemeldete Schadensfall wurde erfolgreich erfasst
               </Header>
               <p>
-                Der gemeldete Schadensfall wurde erfolgreich erfasst
-                Für deinen Schadensfall ist eine Prüfung durch einen Gutachter notwendig.
-                In deiner Region werden aktuell viele Hagelschäden gemeldet.
+                Für diesen konnten wir eine automatische Auszahlung berechnen.
               </p>
               <Header>
                 Deine Sofortauszahlung ist:
@@ -39,9 +37,10 @@ export default () => {
                 </Statistic>
               </Header>
               <Divider/>
-              <LinkButton to="/termin" primary fluid size='huge'>Termin ausmachen</LinkButton>
-              <p></p>
-              <LinkButton to="/chash" primary fluid size='huge'>Nimm das Geld</LinkButton>
+              <LinkButton to="/chash" primary fluid size='huge'>Alles klar!</LinkButton>
+              <p> </p>
+              <LinkButton to="/termin" primary fluid size='huge'>Gutachter-Prüfung</LinkButton>
+
             </div>
             }
 
