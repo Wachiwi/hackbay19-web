@@ -6,11 +6,13 @@ import {Step} from "../components/Wizard";
 
 export default () => {
 
-  const [working, setWorking] = useState(true)
+  const [working, setWorking] = useState(false)
 
+  /*
   setTimeout(() => {
     setWorking(false)
-  }, 4500)
+  }, 20)
+  */
 
   return (
     <OneColumnLayout>
