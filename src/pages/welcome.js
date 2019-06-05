@@ -25,7 +25,7 @@ export default class Welcome extends Component {
     return (
       <Container className='welcome'>
         <Header style={{ marginTop: 40 }} as='h1' textAlign='center'>
-          Willkommen bei,
+          Willkommen bei
         </Header>
         <Image src={Logo}/>
         <Header as='h1' textAlign='center'>
@@ -46,7 +46,7 @@ export default class Welcome extends Component {
           </p>
         </Container>
 
-        <h1 className="subtitle"> Wir unterstützen</h1>
+        <h2 className="subtitle"> Wir unterstützen folgende versicherungen</h2>
         <div className="welcome__logos">
           <Transition visible={this.state.visibile} animation="fade up" duration={2000}>
             <Image className="welcome__logos__logo" src={HukLogo} centered/>
