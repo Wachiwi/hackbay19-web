@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Wizard, { Step } from '../components/Wizard';
+import React, {useState} from 'react';
+import Wizard, {Step} from '../components/Wizard';
 
-import { Button, Form, Header, Icon, Segment } from 'semantic-ui-react';
+import {Button, Form, Header, Icon, Segment} from 'semantic-ui-react';
 
 import fakeLicensePlateAPI from '../fakes/LicensePlateAPI';
 
@@ -9,7 +9,6 @@ export default (props) => {
   let [licensePlateNumber, setLicensePlate] = useState(undefined);
   let [insuranceProvider, setInsuranceProvider] = useState({});
   let [birthDayDate, setBirthDayDate] = useState();
-
 
   const numberBetween = (min, max) => Math.floor(Math.random() * (max - min + 1) + min);
 
