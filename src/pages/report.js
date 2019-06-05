@@ -103,7 +103,7 @@ export default (props) => {
 
             </Step>
             <Step>
-                <Header>
+                <Header size='huge'>
                     Fotos vom Schaden hinzufügen
                     <Header.Subheader>
                         Bitte beachte folgende Tipps beim Fotografieren, damit wir den Schaden automatisiert bewerten können:
