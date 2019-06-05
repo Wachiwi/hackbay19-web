@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import Wizard, {Step} from '../components/Wizard';
 
-import {Button, Form, Header, Icon, Segment} from 'semantic-ui-react';
+import {Button, Form, Header, Icon, Segment, Statistic} from 'semantic-ui-react';
 
 import fakeLicensePlateAPI from '../fakes/LicensePlateAPI';
 
@@ -33,7 +33,7 @@ export default (props) => {
 
   return (
     <Wizard>
-      <Step next={checkLicensePlate}>
+      <Step next={checkLicensePlate} >
         <Header>
           Allgemeine Informationen
           <Header.Subheader>
@@ -61,8 +61,18 @@ export default (props) => {
 
         <p>
           Dein Kennzeichen ist <br/>
-          {licensePlateNumber} <br/>
-          und bei der {insuranceProvider.name} versichert.
+          <Statistic size="small">
+            <Statistic.Value>{licensePlateNumber}</Statistic.Value>
+          </Statistic>
+          <br/>
+
+          und bei der
+
+          <Statistic size="small">
+            <Statistic.Value>{insuranceProvider.name}</Statistic.Value>
+          </Statistic>
+
+          versichert.
         </p>
 
         <p>Bitte gib zur Bestätigung dein Geburtsdatum ein</p>
