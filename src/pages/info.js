@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import { Button, Container, Header} from 'semantic-ui-react';
+import {Button, Container, Header, Image} from 'semantic-ui-react';
+import Logo from "../resources/img/schadenzubeklagen-schwarz.png";
 
 export default class Info extends Component {
   constructor(props) {
@@ -18,9 +19,11 @@ export default class Info extends Component {
     return (
       <Container className='welcome'>
         <Header style={{ marginTop: 40 }} as='h1' textAlign='center'>
-          Willkommen bei JaT,
-          <br/>
-          <div style={{ marginLeft: '10px' }}>Damage Claim <br/> made Easy</div>
+          Willkommen bei,
+        </Header>
+        <Image src={Logo}/>
+        <Header as='h1' textAlign='center'>
+          Damage Claim <br/> made Easy
         </Header>
         <Link to="/report">
           <Button style={{ marginTop: 100 }} className="welcome__button" color='orange' size='huge'
