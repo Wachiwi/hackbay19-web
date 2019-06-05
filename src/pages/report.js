@@ -1,12 +1,13 @@
 import React, {useState} from 'react';
 import Wizard, {Step} from '../components/Wizard';
 
-import {Button, Form, Header, Icon, Segment} from 'semantic-ui-react';
+import {Button, Form, Header, Icon, Segment, Image} from 'semantic-ui-react';
 
 import fakeLicensePlateAPI from '../fakes/LicensePlateAPI';
+import LinkButton from "../components/LinkButton";
 
 export default (props) => {
-  let [licensePlateNumber, setLicensePlate] = useState(undefined);
+  let [licensePlateNumber, setLicensePlate, img, setImg] = useState(undefined);
   let [insuranceProvider, setInsuranceProvider] = useState({});
   let [birthDayDate, setBirthDayDate] = useState();
 
@@ -87,7 +88,7 @@ export default (props) => {
 
         <Form>
           <Form.Field>
-            <input type="file" accept="image/*" multiple alt="Bilders des Schaden"/>
+            <input type="file" accept="image/*" multiple alt="Bilders des Schaden" onChange={ (event, data) => console.log(data)}/>
           </Form.Field>
         </Form>
 
@@ -98,6 +99,23 @@ export default (props) => {
           </Header>
           <Button primary>Füge Bilder hinzu</Button>
         </Segment>
+        <Image src={img}/>
+      </Step>
+      <Step>
+        <Header>
+          Erfolg!
+        </Header>
+        <p>
+          Der gemeldete Schadensfall wurde erfolgreich erfasst
+          Für deinen Schadensfall ist eine Prüfung durch einen Gutachter notwendig.
+          In deiner Region werden aktuell viele Hagelschäden gemeldet.
+        </p>
+        <Header>
+          Deine Sofortauszahlung ist 1500€
+        </Header>
+        <LinkButton to="/termin" primary fluid size='huge'>Termin ausmachen</LinkButton>
+        <p> </p>
+        <LinkButton to="/chash" primary fluid size='huge'>Nimm das Geld</LinkButton>
 
       </Step>
     </Wizard>
