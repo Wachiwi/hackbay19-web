@@ -103,7 +103,7 @@ export default (props) => {
 
       </Step>
       <Step>
-        <Header>
+        <Header size='huge'>
           Allgemeine Informationen
           <Header.Subheader>
             Diese werden bearbeitet und an den Versicherer
