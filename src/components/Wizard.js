@@ -1,22 +1,19 @@
-import React, { useState } from 'react';
+import React, {useState} from 'react';
 
-import { Button, Container, Dimmer, Grid, Loader, Transition } from 'semantic-ui-react';
+import {Button, Container, Dimmer, Grid, Loader} from 'semantic-ui-react';
 
-export const Step = (props) => {
+export const Step = ({active, children}) => {
+
   return (
     <div>
-      {props.children}
+      {active && children}
     </div>
   );
 };
 
-const Wizard = ({ children }) => {
+const Wizard = ({children}) => {
   let [step, setStep] = useState(0);
   let [loading, setLoading] = useState(false);
-
-  const toggleLoading = () => {
-    setLoading(!loading);
-  };
 
   const previousStep = () => {
     if (step > 0) setStep(step - 1);
@@ -40,7 +37,7 @@ const Wizard = ({ children }) => {
       <Grid padded="vertically">
         <Grid.Row columns={1}>
           <Container text>
-            <Transition.Group animation={'fade left'} duration={2000}>
+
             {
               React.Children.map(children, (el, index) => {
                 if (index === step) {
@@ -52,6 +49,7 @@ const Wizard = ({ children }) => {
 
                   return React.cloneElement(el, {
                     currentStep: step,
+                    active: index === step
 
                   });
                 }
@@ -59,7 +57,7 @@ const Wizard = ({ children }) => {
                 return null;
               })
             }
-            </Transition.Group>
+
           </Container>
         </Grid.Row>
         <Grid.Row columns={2}>

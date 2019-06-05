@@ -33,7 +33,7 @@ export default class Welcome extends Component {
         </Header>
 
 
-        <LinkButton to="/report" primary block size='huge'>Schaden melden</LinkButton>
+        <LinkButton to="/report" primary fluid size='huge'>Schaden melden</LinkButton>
         <div style={{ textAlign: 'center' }}>
           <Link to="/info">Mehr informationen</Link>
         </div>
